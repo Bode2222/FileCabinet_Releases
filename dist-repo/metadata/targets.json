@@ -1,0 +1,256 @@
+{
+ "signatures": [
+  {
+   "keyid": "e62a0fa1952f64c4271eaaae0b9449c1c8f5355951232927224dae6818f95a50",
+   "sig": "a710b18f996790fab1f06e53bd7d614d69b06a83f6621f65bfcfedcb9688f55afcea53aad88db971207ca2234e05ee87812be3e805bdbe21c716376b9567c90a"
+  }
+ ],
+ "signed": {
+  "_type": "targets",
+  "expires": "2025-10-10T02:32:59Z",
+  "spec_version": "1.0.31",
+  "targets": {
+   "FileCabinet-0.0.12.tar.gz": {
+    "custom": {
+     "tufup": {
+      "required": false
+     },
+     "user": null
+    },
+    "hashes": {
+     "sha256": "a1918aec25250ac1e1989f895894092079ffe73c4f36e48ac1a0983bca8126ee"
+    },
+    "length": 1650715518
+   },
+   "FileCabinet-0.0.13.tar.gz": {
+    "custom": {
+     "tufup": {
+      "required": false
+     },
+     "user": null
+    },
+    "hashes": {
+     "sha256": "382056ef4da87877722a8b7aee19887da017be661dfeaf2b4e65864e7d76dacd"
+    },
+    "length": 1650709331
+   },
+   "FileCabinet-0.0.14.tar.gz": {
+    "custom": {
+     "tufup": {
+      "required": false
+     },
+     "user": null
+    },
+    "hashes": {
+     "sha256": "1e47f261c904d8cdca6933f929a938ad8ab71fc95d843dad1f7675651c5970ee"
+    },
+    "length": 1650732327
+   },
+   "FileCabinet-0.0.15.tar.gz": {
+    "custom": {
+     "tufup": {
+      "required": false
+     },
+     "user": null
+    },
+    "hashes": {
+     "sha256": "7b989ae10b45d71736a4f42ba759120972ffcde39b17c893cf9318788c7529b8"
+    },
+    "length": 1650729753
+   },
+   "FileCabinet-0.0.16.tar.gz": {
+    "custom": {
+     "tufup": {
+      "required": false
+     },
+     "user": null
+    },
+    "hashes": {
+     "sha256": "52a924039063b25454862e326cd758cd09e1af80d0336e32a8d85ccce151c996"
+    },
+    "length": 1650719011
+   },
+   "FileCabinet-0.0.17.tar.gz": {
+    "custom": {
+     "tufup": {
+      "required": false
+     },
+     "user": null
+    },
+    "hashes": {
+     "sha256": "a1d5e64ce981c96d218b03f5b82987411a55b61b94e57d8a2c695a304cd93aa2"
+    },
+    "length": 1650728627
+   },
+   "FileCabinet-0.0.18.tar.gz": {
+    "custom": {
+     "tufup": {
+      "required": false
+     },
+     "user": null
+    },
+    "hashes": {
+     "sha256": "67dbdc0588e7b1a4adc991d8623a26fdc4494952f275eaf48cd7c047a4f8b7e7"
+    },
+    "length": 1650725372
+   },
+   "FileCabinet-0.0.19.tar.gz": {
+    "custom": {
+     "tufup": {
+      "required": false
+     },
+     "user": null
+    },
+    "hashes": {
+     "sha256": "83e996a001dc41c6c1b7068edbfad7ce39e0280ecc8eaf8ec071def15d971ea9"
+    },
+    "length": 1650734474
+   },
+   "FileCabinet-0.0.20.tar.gz": {
+    "custom": {
+     "tufup": {
+      "required": false
+     },
+     "user": null
+    },
+    "hashes": {
+     "sha256": "d49ff613efb1c226598bd4281ad257bac60622f9672db0e435e6cc2260d09b07"
+    },
+    "length": 1650741641
+   },
+   "FileCabinet-0.0.21.tar.gz": {
+    "custom": {
+     "tufup": {
+      "required": false
+     },
+     "user": null
+    },
+    "hashes": {
+     "sha256": "d02ed0d9ec75f5b33c51ce829d12e242beab797a28ab5bdb5ed1b0ba5bb622ae"
+    },
+    "length": 1650741706
+   },
+   "FileCabinet-0.0.22.tar.gz": {
+    "custom": {
+     "tufup": {
+      "required": false
+     },
+     "user": null
+    },
+    "hashes": {
+     "sha256": "a7c3e9de8d2e644d7ceedf7b08edc175e1302b381338936717131a5e63e74862"
+    },
+    "length": 1650738519
+   },
+   "FileCabinet-0.0.23.tar.gz": {
+    "custom": {
+     "tufup": {
+      "required": false
+     },
+     "user": null
+    },
+    "hashes": {
+     "sha256": "ed3033906806f4fd9ee8cd0e3cb95e4a985d1841e400490db39dad023875ac64"
+    },
+    "length": 1650755001
+   },
+   "FileCabinet-0.0.24.tar.gz": {
+    "custom": {
+     "tufup": {
+      "required": false
+     },
+     "user": null
+    },
+    "hashes": {
+     "sha256": "03b9eaf9ec8db66e899ab41887629aced7ac8105f85f6a82167ed6c09870037e"
+    },
+    "length": 1650784932
+   },
+   "FileCabinet-0.0.25.tar.gz": {
+    "custom": {
+     "tufup": {
+      "required": false
+     },
+     "user": null
+    },
+    "hashes": {
+     "sha256": "251079d3bb716c2823d0b8be2c8e76eac5a762159015e3d9adf4b1d8f0358c52"
+    },
+    "length": 1650783651
+   },
+   "FileCabinet-0.0.26.tar.gz": {
+    "custom": {
+     "tufup": {
+      "required": false
+     },
+     "user": null
+    },
+    "hashes": {
+     "sha256": "139fdfeab90ef53aa14f9ab56a489acd05a4720f6b4f37feedce5b246caed249"
+    },
+    "length": 1650768489
+   },
+   "FileCabinet-0.0.27.tar.gz": {
+    "custom": {
+     "tufup": {
+      "required": false
+     },
+     "user": null
+    },
+    "hashes": {
+     "sha256": "515fd48466e1e61c63233a1d459e5e61c28fca0e6249806df09ce63bd4cb8d1f"
+    },
+    "length": 1653569936
+   },
+   "FileCabinet-0.0.28.tar.gz": {
+    "custom": {
+     "tufup": {
+      "required": false
+     },
+     "user": null
+    },
+    "hashes": {
+     "sha256": "631420e7db9abc1ad5aa3271bccd2b2c8cf4908b2d271df049a7e488dce36a80"
+    },
+    "length": 1653571294
+   },
+   "FileCabinet-0.0.29.tar.gz": {
+    "custom": {
+     "tufup": {
+      "required": false
+     },
+     "user": null
+    },
+    "hashes": {
+     "sha256": "ae28bf37787a37a099c7ca4a13e88eb7ba142be58d1ca141d8c69eed75f3daab"
+    },
+    "length": 1653574716
+   },
+   "FileCabinet-0.0.30.tar.gz": {
+    "custom": {
+     "tufup": {
+      "required": false
+     },
+     "user": null
+    },
+    "hashes": {
+     "sha256": "781a04433eabe0bfcdca67bbe1ebd4e6ef6ba4044907d19455b0792873c7fba4"
+    },
+    "length": 1653565029
+   },
+   "FileCabinet-0.0.31.tar.gz": {
+    "custom": {
+     "tufup": {
+      "required": false
+     },
+     "user": null
+    },
+    "hashes": {
+     "sha256": "662009795a650b9de674c6522da49018734ace8dbfac61cb41d3e227b4d56445"
+    },
+    "length": 1694018106
+   }
+  },
+  "version": 21
+ }
+}

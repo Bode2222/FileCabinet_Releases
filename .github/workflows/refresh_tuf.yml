@@ -1,0 +1,53 @@
+# .github/workflows/refresh-tuf.yml
+name: Refresh TUF metadata
+
+on:
+  schedule:
+    - cron: "10 15 * * *"   # daily at 06:00 UTC
+  workflow_dispatch: {}
+
+permissions:
+  contents: write  # needed to create/update releases and push commits
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    env:
+      # gh CLI will read this automatically
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Install deps
+        run: pip install "tufup>=0.9"
+
+      - name: Refresh snapshot & timestamp (sign with secrets)
+        env:
+          SNAPSHOT_KEY_JSON: ${{ secrets.SNAPSHOT_KEY_JSON }}
+          TIMESTAMP_KEY_JSON: ${{ secrets.TIMESTAMP_KEY_JSON }}
+        run: python scripts/refresh_snapshot_timestamp.py
+
+      - name: Ensure 'metadata' release exists
+        run: |
+          if ! gh release view metadata >/dev/null 2>&1; then
+            gh release create metadata -t "TUF metadata" -n "Automated TUF metadata assets"
+          fi
+        # gh release create/view are part of GitHub CLI
+
+      - name: Upload metadata assets (overwrite by name)
+        run: |
+          shopt -s globstar nullglob
+          files=(dist-repo/metadata/**/*)
+          if [ ${#files[@]} -gt 0 ]; then
+            # --clobber overwrites existing assets with the same filename
+            gh release upload metadata "${files[@]}" --clobber
+          else
+            echo "No files found under dist-repo/metadata/"
+          fi
