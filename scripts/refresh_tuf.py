@@ -1,5 +1,6 @@
 # scripts/refresh_snapshot_timestamp.py
 import os, tempfile, json
+from pathlib import Path
 from tufup.repo import Repository
 
 def _write_key(tmpdir, name, json_str):
@@ -18,8 +19,8 @@ def main():
 
     # Write keys coming from env (GitHub Secrets)
     with tempfile.TemporaryDirectory() as tmp:
-        snapshot_key_path = _write_key(tmp, "dist-keys/snapshot_key.json", os.environ["SNAPSHOT_KEY_JSON"])
-        timestamp_key_path = _write_key(tmp, "dist-keys/timestamp_key.json", os.environ["TIMESTAMP_KEY_JSON"])
+        snapshot_key_path = _write_key(Path("dist-keys"), "snapshot_key.json", os.environ["SNAPSHOT_KEY_JSON"])
+        timestamp_key_path = _write_key(Path("dist-keys"), "timestamp_key.json", os.environ["TIMESTAMP_KEY_JSON"])
         repo = Repository(app_name="app", repo_dir="dist-repo", keys_dir="tmp/dist-keys")
 
         # Refresh expirations then sign (your original flow)
