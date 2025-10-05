@@ -10,16 +10,16 @@ def _write_key(tmpdir, name, json_str):
     return p
 
 def main():
-    # Prefer config; fall back to explicit paths
-    try:
-        repo = Repository.from_config()
-    except FileNotFoundError:
-        repo = Repository(app_name="app", repo_dir="dist-repo", keys_dir="dist-keys")
 
     # Write keys coming from env (GitHub Secrets)
     with tempfile.TemporaryDirectory() as tmp:
-        snapshot_key_path = _write_key(tmp, "snapshot_key.json", os.environ["SNAPSHOT_KEY_JSON"])
-        timestamp_key_path = _write_key(tmp, "timestamp_key.json", os.environ["TIMESTAMP_KEY_JSON"])
+        snapshot_key_path = _write_key(tmp, "dist-keys/snapshot_key.json", os.environ["SNAPSHOT_KEY_JSON"])
+        timestamp_key_path = _write_key(tmp, "dist-keys/timestamp_key.json", os.environ["TIMESTAMP_KEY_JSON"])
+        # Prefer config; fall back to explicit paths
+        try:
+            repo = Repository.from_config()
+        except FileNotFoundError:
+            repo = Repository(app_name="app", repo_dir="dist-repo", keys_dir="dist-keys")
 
         # Refresh expirations then sign (your original flow)
         repo.refresh_expiration_date("snapshot", 1)
