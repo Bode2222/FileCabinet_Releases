@@ -32,7 +32,7 @@ jobs:
         env:
           SNAPSHOT_KEY_JSON: ${{ secrets.SNAPSHOT_KEY_JSON }}
           TIMESTAMP_KEY_JSON: ${{ secrets.TIMESTAMP_KEY_JSON }}
-        run: python scripts/refresh_snapshot_timestamp.py
+        run: python scripts/refresh_tuf.py
 
       - name: Ensure 'metadata' release exists
         run: |
