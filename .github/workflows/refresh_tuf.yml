@@ -19,6 +19,15 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Restore dist-keys (from secret tarball)
+        run: |
+          echo "$DIST_KEYS_TGZ_B64" | base64 -d > dist-keys.tgz
+          mkdir -p dist-keys
+          tar -xzf dist-keys.tgz -C dist-keys
+          chmod -R 700 dist-keys
+        env:
+          DIST_KEYS_TGZ_B64: ${{ secrets.DIST_KEYS_TGZ_B64 }}
+
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
@@ -26,12 +35,11 @@ jobs:
           cache: pip
 
       - name: Install deps
-        run: pip install "tufup>=0.9"
+        run: |
+          python -m pip install --upgrade pip
+          pip install "tufup>=0.9"
 
       - name: Refresh snapshot & timestamp (sign with secrets)
-        env:
-          SNAPSHOT_KEY_JSON: ${{ secrets.SNAPSHOT_KEY_JSON }}
-          TIMESTAMP_KEY_JSON: ${{ secrets.TIMESTAMP_KEY_JSON }}
         run: python scripts/refresh_tuf.py
 
       - name: Ensure 'metadata' release exists
