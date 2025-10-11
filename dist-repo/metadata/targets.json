@@ -2,12 +2,12 @@
  "signatures": [
   {
    "keyid": "e62a0fa1952f64c4271eaaae0b9449c1c8f5355951232927224dae6818f95a50",
-   "sig": "8318bd1de31c8bccf90bf8a282d178255541b1f05ee6a8b4b0cf3d11ef1981b3938b51a929700a2f0f56e5a92fede888a8f82121db9b776ec85a947ceb21940f"
+   "sig": "0d97fd979a289fd8b7debd5d194753105ce0c29e27edc0190a4244b1acdc6dc20e5666ee89c1eef72e230c8596053230d081ab8906670726b7e0f17127811b08"
   }
  ],
  "signed": {
   "_type": "targets",
-  "expires": "2025-10-16T03:45:31Z",
+  "expires": "2025-10-18T01:04:25Z",
   "spec_version": "1.0.31",
   "targets": {
    "FileCabinet-0.0.12.tar.gz": {
@@ -285,8 +285,32 @@
      "sha256": "97fb998e41f2da1f72b454fd47c969dfee5b5e5189f0203dfecf3f048592e666"
     },
     "length": 1694046187
+   },
+   "FileCabinet-1.0.3.tar.gz": {
+    "custom": {
+     "tufup": {
+      "required": false
+     },
+     "user": null
+    },
+    "hashes": {
+     "sha256": "cd9840a009674da40d2a8f2452fbef02e6bb5299beb109fc19fcd1c5c7aa5fdb"
+    },
+    "length": 1694052992
+   },
+   "FileCabinet-1.0.4.tar.gz": {
+    "custom": {
+     "tufup": {
+      "required": false
+     },
+     "user": null
+    },
+    "hashes": {
+     "sha256": "7bfc34f4a9768fc5ef6681f46058fa2df295f38c84765c6812f8ab8cb9752bcd"
+    },
+    "length": 1694052992
    }
   },
-  "version": 24
+  "version": 26
  }
 }
