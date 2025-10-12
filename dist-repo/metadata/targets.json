@@ -2,12 +2,12 @@
  "signatures": [
   {
    "keyid": "e62a0fa1952f64c4271eaaae0b9449c1c8f5355951232927224dae6818f95a50",
-   "sig": "0d97fd979a289fd8b7debd5d194753105ce0c29e27edc0190a4244b1acdc6dc20e5666ee89c1eef72e230c8596053230d081ab8906670726b7e0f17127811b08"
+   "sig": "3684d9dc9d97fb5d792e1eb49d6e9ff6162b2830522d0a93782ea7ed390185959a27fb4dbf1edc5b1a1c57d30a5dd28c45d3b92ee85690f19aeb38dc3e3a080e"
   }
  ],
  "signed": {
   "_type": "targets",
-  "expires": "2025-10-18T01:04:25Z",
+  "expires": "2025-10-19T02:27:05Z",
   "spec_version": "1.0.31",
   "targets": {
    "FileCabinet-0.0.12.tar.gz": {
@@ -309,8 +309,20 @@
      "sha256": "7bfc34f4a9768fc5ef6681f46058fa2df295f38c84765c6812f8ab8cb9752bcd"
     },
     "length": 1694052992
+   },
+   "FileCabinet-1.0.5.tar.gz": {
+    "custom": {
+     "tufup": {
+      "required": false
+     },
+     "user": null
+    },
+    "hashes": {
+     "sha256": "440ff38e0b29e5e089a2b74ca64241e1081e6bf3fee5106d3ad6e2b889c4ba70"
+    },
+    "length": 1694109254
    }
   },
-  "version": 26
+  "version": 27
  }
 }
